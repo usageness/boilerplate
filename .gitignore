@@ -6,4 +6,13 @@
 !.yarn/versions
 
 !.yarn/cache
+
+# Plug N Play 를 위해 ignore 하지 않습니다.
 #.pnp.*
+
+# ide files
+.vscode
+.editorconfig
+
+# build results
+dist

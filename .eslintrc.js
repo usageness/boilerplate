@@ -23,6 +23,9 @@ module.exports = {
             group: 'external',
             position: 'before',
           },
+          { pattern: 'assets/**', group: 'internal' },
+          { pattern: 'types/**', group: 'internal' },
+          { pattern: 'utils/**', group: 'internal' },
         ],
         pathGroupsExcludedImportTypes: ['react'],
         alphabetize: {

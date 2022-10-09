@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
+    "strict": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
     "esModuleInterop": true,
     "sourceMap": true,
-    "baseUrl": "src"
+    "baseUrl": "./src"
   },
-  "include": ["src", "src/*"]
+  "include": ["src", "src/*"],
+  "exclude": ["node_modules/*"]
 }
