@@ -9,3 +9,14 @@
 브랜치를 변경하여 원하시는 기술 스택을 선택해주세요.
 
 문제가 있을경우 이슈에 남겨주세요.
+
+## `vscode`에서 모듈을 찾을 수 없는 오류가 발생할 경우
+
+```shell
+yarn add @yarnpkg/sdks -D
+yarn dlx @yarnpkg/sdks vscode
+```
+
+콘솔창에 위 명령어를 입력하여 주시기 바랍니다.
+
+참고 : [https://yarnpkg.com/getting-started/editor-sdks](https://yarnpkg.com/getting-started/editor-sdks)
