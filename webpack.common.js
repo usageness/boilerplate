@@ -5,6 +5,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: path.resolve(__dirname, './src/index.tsx'),
   plugins: [new CleanWebpackPlugin()],
+  modules: {
+    rules: [
+      {
+        test: /\.svg/,
+        type: 'asset/resource',
+      },
+    ],
+  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
@@ -16,5 +24,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
 };
