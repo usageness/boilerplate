@@ -1,7 +1,6 @@
 const path = require('path');
 
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common.js');
@@ -19,12 +18,7 @@ module.exports = merge(common, {
       },
     ],
   },
-  plugins: [
-    new ForkTsCheckerWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-    }),
-  ],
+  plugins: [new ForkTsCheckerWebpackPlugin()],
   devServer: {
     historyApiFallback: true,
     static: path.resolve(__dirname, './dist'),

@@ -1,14 +1,14 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.tsx'),
-  plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [
       {
-        test: /\.svg/,
+        test: /\.(svg|woff(2)?|ttf|png|jpe?g|gif|webp)$/i,
         type: 'asset/resource',
       },
     ],
@@ -21,6 +21,13 @@ module.exports = {
       utils: path.resolve(__dirname, './src/utils'),
     },
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      favicon: 'public/favicon.ico',
+    }),
+  ],
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
