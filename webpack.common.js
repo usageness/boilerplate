@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: path.resolve(__dirname, './src/index.tsx'),
   plugins: [new CleanWebpackPlugin()],
-  modules: {
+  module: {
     rules: [
       {
         test: /\.svg/,
